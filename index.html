@@ -654,11 +654,11 @@ Content-Length: 33
 <div class="sect2">
 <h3 id="_getuserinfo">GetUserInfo</h3>
 <div class="paragraph">
-<p>프로필 정보, user뒤에 이름 넣어햐함</p>
+<p>프로필 정보, user뒤에 userIdx 넣어햐함</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /user/%EB%AC%B8%EA%B0%80%EC%9D%B83 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /user/60bab779-8454-4978-9dcf-2187b57f05bf HTTP/1.1
 Content-Type: application/json
 Host: localhost:8080</code></pre>
 </div>
@@ -931,11 +931,11 @@ Content-Length: 33
 <div class="sect2">
 <h3 id="_getfollowinfo">GetFollowInfo</h3>
 <div class="paragraph">
-<p>follow 뒤에 user 이름, 그 유저의 follower, following 수를 출력해줌</p>
+<p>follow 뒤에 userIdx, 그 유저의 follower, following 수를 출력해줌</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /follow/%EB%AC%B8%EA%B0%80%EC%9D%B8 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /follow/60bab779-8454-4978-9dcf-2187b57f05bf HTTP/1.1
 Content-Type: application/json
 Host: localhost:8080</code></pre>
 </div>
@@ -953,11 +953,11 @@ Content-Length: 69
 <div class="sect2">
 <h3 id="_postfollo">PostFollo</h3>
 <div class="paragraph">
-<p>follow 뒤에 user 이름, 내가 팔로우 할때 보넴</p>
+<p>follow 뒤에 userIdx, 내가 팔로우 할때 보넴</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /follow/%EB%AC%B8%EA%B0%80%EC%9D%B82 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /follow/60bab779-8454-4978-9dcf-2187b57f05bf HTTP/1.1
 Content-Type: application/json
 userId: ansrkdls
 Host: localhost:8080</code></pre>
@@ -976,11 +976,11 @@ Content-Length: 33
 <div class="sect2">
 <h3 id="_deletefollow">DeleteFollow</h3>
 <div class="paragraph">
-<p>follow 뒤에 user 이름, 팔로우 취소 할때 보넴</p>
+<p>follow 뒤에 userIdx, 팔로우 취소 할때 보넴</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /follow/%EB%AC%B8%EA%B0%80%EC%9D%B82 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">DELETE /follow/60bab779-8454-4978-9dcf-2187b57f05bf HTTP/1.1
 Content-Type: application/json
 userId: ansrkdls
 Host: localhost:8080</code></pre>
@@ -999,11 +999,11 @@ Content-Length: 33
 <div class="sect2">
 <h3 id="_getfollower">GetFollower</h3>
 <div class="paragraph">
-<p>follower 뒤에 user 이름, 그 유저의 follower를 content에 담아서 줌, 페이징은 파라미터에 page로</p>
+<p>follower 뒤에 userIdx, 그 유저의 follower를 content에 담아서 줌, 페이징은 파라미터에 page로</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /follow/follower/%EB%AC%B8%EA%B0%80%EC%9D%B8 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /follow/follower/60bab779-8454-4978-9dcf-2187b57f05bf HTTP/1.1
 Content-Type: application/json
 userId: ansrkdls
 Host: localhost:8080</code></pre>
@@ -1026,7 +1026,7 @@ Content-Length: 350
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /follow/following/%EB%AC%B8%EA%B0%80%EC%9D%B8 HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /follow/following/60bab779-8454-4978-9dcf-2187b57f05bf HTTP/1.1
 Content-Type: application/json
 userId: ansrkdls
 Host: localhost:8080</code></pre>
